@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex — Frontend Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+      <div class="email-popup" id="emailPopup">
+    <div class="email-box">
+        <p id="emailText">alexhalus201006@gmail.com</p>
+        <button id="copyEmailBtn">Copy email</button>
+    </div>
+</div>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Alex</span>
+                <span class="logo-bracket">/&gt;</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="burger-menu" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-label">
+                        <span class="typing-effect">console.log("Hello World");</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="name-highlight">Alex</span>
+                        <br>
+                        <span class="gradient-text">Frontend Developer</span>
+                    </h1>
+                    <p class="hero-description">
+                        Crafting pixel-perfect, responsive web experiences with modern technologies. 
+                        Transforming ideas into interactive reality.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View Projects</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Contact Me</span>
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/workalx" class="social-link" aria-label="GitHub">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                            </svg>
+                        </a>
+                         <a href="https://t.me/alexkhalus" class="social-link" aria-label="Telegram">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M9.5 16.8L9.9 13.4L16.8 7.8C17.1 7.5 16.8 7.4 16.4 7.6L8.2 12.1L4.7 11
+                 C3.9 10.8 3.9 10.2 4.9 9.8L18.3 4.6C19 4.3 19.7 4.8 19.5 5.7L17.2 18.4
+                 C17 19.5 16.3 19.8 15.4 19.3L10.9 16.9L8.8 18.9C8.6 19.1 8.5 19.2 8.2 19.2
+                 L8.5 16.9Z"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+    </svg>
+</a>
+                       <a href="#" class="social-link" id="emailIcon" aria-label="Email">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-width="2"/>
+        <polyline points="22,6 12,13 2,6" stroke-width="2"/>
+    </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="avatar-container">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar">
+                            <img src="img/me.jpg" alt="me">
+                        </div>
+                        <div class="floating-elements">
+                            <div class="float-item" style="--delay: 0s;">{ }</div>
+                            <div class="float-item" style="--delay: 0.5s;">&lt;/&gt;</div>
+                            <div class="float-item" style="--delay: 1s;">[ ]</div>
+                            <div class="float-item" style="--delay: 1.5s;">( )</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll Down</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get To Know</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-cards">
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="2" y="3" width="20" height="14" rx="2" stroke-width="2"/>
+                                <path d="M8 21h8M12 17v4" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Experience</h3>
+                        <p>3+ Years<br>Frontend Development</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Projects</h3>
+                        <p>50+ Completed<br>Projects</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Clients</h3>
+                        <p>30+ Happy<br>Clients</p>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p class="lead">
+                        Привіт! Я Alex, фронтенд-розробник, який захоплений створенням красивих 
+                        та функціональних веб-додатків.
+                    </p>
+                    <p>
+                        Спеціалізуюсь на сучасних технологіях: <strong>HTML5, CSS3, JavaScript (ES6+)</strong>. 
+                        Моя сила — це адаптивна верстка, плавні анімації та чистий, оптимізований код. 
+                        Я завжди слідкую за останніми трендами в веб-розробці та постійно вдосконалюю свої навички.
+                    </p>
+                    <p>
+                        Моя мета — створювати веб-досвід, який не лише виглядає чудово, але й працює 
+                        бездоганно на всіх пристроях та браузерах. Я вірю в силу деталей та приділяю 
+                        увагу кожному пікселю.
+                    </p>
+                    <div class="about-buttons">
+                        <a href="#contact" class="btn btn-primary">Let's Talk</a>
+                        <a href="#" class="btn btn-outline" id="downloadCV">Download CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I Know</span>
+                <h2 class="section-title">My Skills</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="16 18 22 12 16 6" stroke-width="2"/>
+                                <polyline points="8 6 2 12 8 18" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML5</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">CSS3 (Flexbox, Grid)</span>
+                                <span class="skill-percentage">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript (ES6+)</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke-width="2"/>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96" stroke-width="2"/>
+                                <line x1="12" y1="22.08" x2="12" y2="12" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>UI / UX</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Responsive Design</span>
+                                <span class="skill-percentage">96%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 96%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Pixel Perfect</span>
+                                <span class="skill-percentage">94%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 94%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Animations</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Accessibility</span>
+                                <span class="skill-percentage">87%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 87%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Tools</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git / GitHub</span>
+                                <span class="skill-percentage">91%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 91%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">VS Code</span>
+                                <span class="skill-percentage">98%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 98%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Figma</span>
+                                <span class="skill-percentage">86%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 86%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Chrome DevTools</span>
+                                <span class="skill-percentage">93%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 93%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Projects</h2>
+            </div>
+
+            <!-- Real Projects -->
+            <div class="projects-subsection">
+                <h3 class="subsection-title">
+                    <span class="title-icon">🚀</span>
+                    Real Projects
+                </h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://workalx.github.io/K-Drama-for-you.com/ " class="project-link">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke-width="2"/>
+                                            <polyline points="15 3 21 3 21 9" stroke-width="2"/>
+                                            <line x1="10" y1="14" x2="21" y2="3" stroke-width="2"/>
+                                        </svg>
+                                        Live Demo
+                                    </a>
+                                    <a href="https://github.com/workalx/K-Drama-for-you.com" class="project-link">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                        </svg>
+                                        Code
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="img/dram.jpg" alt="E-Commerce Platform" class="project-img">
+
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4 class="project-title">K-Drama for You</h4>
+                                <span class="project-role">Frontend Developer</span>
+                            </div>
+                            <p class="project-description">
+                                Повнофункціональна платформа кінотеатра для перегляду олюблених 
+                                корейських фільмів та серіалів. 
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">Html</span>
+                                <span class="tech-tag">Css</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://workalx.github.io/AnimeWorld.com/" class="project-link">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke-width="2"/>
+                                            <polyline points="15 3 21 3 21 9" stroke-width="2"/>
+                                            <line x1="10" y1="14" x2="21" y2="3" stroke-width="2"/>
+                                        </svg>
+                                        Live Demo
+                                    </a>
+                                    <a href="https://github.com/workalx/AnimeWorld.com" class="project-link">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                        </svg>
+                                        Code
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="img/anime.png" alt="E-Commerce Platform" class="project-img">
+
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4 class="project-title">Anime World</h4>
+                                <span class="project-role">Frontend Development</span>
+                            </div>
+                            <p class="project-description">
+                                Веб сайт для перегляду аніме "Фермерська життя в іншому світі" в російській 
+                                озвучці. Із опцій ви можете переглянути фотокадри із самого аніме а також весь сам 
+                                сайт написаний на українській мові.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Figma</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://workalx.github.io/Bible_quize/" class="project-link">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke-width="2"/>
+                                            <polyline points="15 3 21 3 21 9" stroke-width="2"/>
+                                            <line x1="10" y1="14" x2="21" y2="3" stroke-width="2"/>
+                                        </svg>
+                                        Live Demo
+                                    </a>
+                                    <a href="https://github.com/workalx/Bible_quize" class="project-link">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                        </svg>
+                                        Code
+                                    </a>
+                                </div>
+                            </div>
+                             <img src="img/bible.png" alt="E-Commerce Platform" class="project-img">
+
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4 class="project-title">Біблійна Вікторина</h4>
+                                <span class="project-role">Frontend Developer</span>
+                            </div>
+                            <p class="project-description">
+                                Біблійна вікторина для провірки своїх знань Біблії. Сайт розроблений
+                                професорами Чернівецького Теологічного Інституту (ЧТІ) 
+                                як для однокористувачів так і для групи.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Figma</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Practice Projects -->
+            <div class="projects-subsection">
+                <h3 class="subsection-title">
+                    <span class="title-icon">🎨</span>
+                    Practice Projects
+                </h3>
+                <div class="projects-grid">
+                    <div class="project-card practice">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://alexitworks-as.github.io/ARCT.com/" class="project-link">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke-width="2"/>
+                                            <polyline points="15 3 21 3 21 9" stroke-width="2"/>
+                                            <line x1="10" y1="14" x2="21" y2="3" stroke-width="2"/>
+                                        </svg>
+                                        Live Demo
+                                    </a>
+                                    <a href="https://github.com/alexITworks-as/ARCT.com" class="project-link">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                        </svg>
+                                        Code
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="img/build.jpg" alt="E-Commerce Platform" class="project-img">
+
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4 class="project-title">ARCT.com</h4>
+                                <span class="project-badge">Frontend</span>
+                            </div>
+                            <p class="project-description">
+                                Веб сайт для будівельної компанії. Цей сайт позиціонує себе як 
+                                порфоліо компанії. Так як це тільки прототип а не реальний проект тому 
+                                не все працює.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Frontend</span>
+                                <span class="tech-tag">CSS Animations</span>
+                                <span class="tech-tag">JS logics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card practice">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://alexitworks-as.github.io/Game-Industry/#!" class="project-link">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke-width="2"/>
+                                            <polyline points="15 3 21 3 21 9" stroke-width="2"/>
+                                            <line x1="10" y1="14" x2="21" y2="3" stroke-width="2"/>
+                                        </svg>
+                                        Live Demo
+                                    </a>
+                                    <a href="https://github.com/alexITworks-as/Game-Industry" class="project-link">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                        </svg>
+                                        Code
+                                    </a>
+                                </div>
+                            </div>
+                             <img src="img/game.png" alt="E-Commerce Platform" class="project-img">
+
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4 class="project-title">Game-Industry</h4>
+                                <span class="project-badge">Developmen</span>
+                            </div>
+                            <p class="project-description">
+                                Багатосторінковий landing-page сайт для ігрової компанії. Цей сайцт також протопип
+                                тому лише прописаний фронтент. 
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">CSS 3D</span>
+                                <span class="tech-tag">JavaScript Animations</span>
+                                <span class="tech-tag">Figma</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card practice">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://alexitworks-as.github.io/Sell-House/" class="project-link">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke-width="2"/>
+                                            <polyline points="15 3 21 3 21 9" stroke-width="2"/>
+                                            <line x1="10" y1="14" x2="21" y2="3" stroke-width="2"/>
+                                        </svg>
+                                        Live Demo
+                                    </a>
+                                    <a href="https://github.com/alexITworks-as/Sell-House" class="project-link">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                        </svg>
+                                        Code
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="img/building.png" alt="gk">
+                        </div>
+                        
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h4 class="project-title">ЖК Легенда</h4>
+                                <span class="project-badge">Frontend Developmend</span>
+                            </div>
+                            <p class="project-description">
+                                Класичний сайт для реклами ЖК. Цей проект теж тільки прототип.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">CSS3 </span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">HTML5</span>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I Offer</span>
+                <h2 class="section-title">Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="2" y="3" width="20" height="14" rx="2" stroke-width="2"/>
+                            <path d="M8 21h8M12 17v4" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Landing Pages</h3>
+                    <p>Створення сучасних та конверсійних одностороннкових сайтів для вашого бізнесу.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="5" y="2" width="14" height="20" rx="2" stroke-width="2"/>
+                            <path d="M12 18h.01" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>Адаптивна верстка, яка ідеально виглядає на всіх пристроях та екранах.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z" stroke-width="2"/>
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" stroke-width="2"/>
+                            <path d="M2 2l7.586 7.586" stroke-width="2"/>
+                            <circle cx="11" cy="11" r="2" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Website Redesign</h3>
+                    <p>Оновлення та модернізація існуючих вебсайтів з покращенням UX/UI.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <polyline points="16 18 22 12 16 6" stroke-width="2"/>
+                            <polyline points="8 6 2 12 8 18" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Frontend Development</h3>
+                    <p>Розробка інтерактивних веб-додатків з використанням сучасних технологій.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's work together!</h3>
+                    <p>Маєте цікавий проєкт або пропозицію? Я завжди відкритий до нових можливостей та співпраці.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-width="2"/>
+                                    <polyline points="22,6 12,13 2,6" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Email</h4>                   
+                                <a href="#" class="social-link" id="emailIcon" aria-label="Email">
+                                    <span class="__cf_email__" data-cfemail="b1d0ddd4c9d9d0ddc4c2838180818187f1d6dcd0d8dd9fd2dedc">click here</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/workalx">github.com/workalx</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <a href="#" class="social-link" aria-label="Telegram">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M9.5 16.8L9.9 13.4L16.8 7.8C17.1 7.5 16.8 7.4 16.4 7.6L8.2 12.1L4.7 11
+                 C3.9 10.8 3.9 10.2 4.9 9.8L18.3 4.6C19 4.3 19.7 4.8 19.5 5.7L17.2 18.4
+                 C17 19.5 16.3 19.8 15.4 19.3L10.9 16.9L8.8 18.9C8.6 19.1 8.5 19.2 8.2 19.2
+                 L8.5 16.9Z"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+    </svg>
+</a>
+                            </div>
+                            <div>
+                                <h4>Telegram</h4>
+                                <a href="https://t.me/alexkhalus">@alexkhalus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Ім'я</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Повідомлення</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">
+                        <span>Надіслати</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <line x1="22" y1="2" x2="11" y2="13" stroke-width="2"/>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">Alex</span>
+                    <span class="logo-bracket">/&gt;</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                    </a>
+                     <a href="#" class="social-link" aria-label="Telegram">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M9.5 16.8L9.9 13.4L16.8 7.8C17.1 7.5 16.8 7.4 16.4 7.6L8.2 12.1L4.7 11
+                 C3.9 10.8 3.9 10.2 4.9 9.8L18.3 4.6C19 4.3 19.7 4.8 19.5 5.7L17.2 18.4
+                 C17 19.5 16.3 19.8 15.4 19.3L10.9 16.9L8.8 18.9C8.6 19.1 8.5 19.2 8.2 19.2
+                 L8.5 16.9Z"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+    </svg>
+</a>
+                    <a href="#" class="social-link" id="emailIcon" aria-label="Email">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-width="2"/>
+                            <polyline points="22,6 12,13 2,6" stroke-width="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Alex. All rights reserved.</p>
+                <p class="footer-tech">Built with HTML, CSS & JavaScript ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("M1Z2qxpdBMTl5R9oT"); // Ваш Public Key
+        })();
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
